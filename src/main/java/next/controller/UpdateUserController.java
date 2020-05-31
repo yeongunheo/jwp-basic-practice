@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import core.db.DataBase;
 import next.model.User;
@@ -21,6 +22,8 @@ public class UpdateUserController extends HttpServlet {
 				req.getParameter("name"),
 				req.getParameter("email"));
 		DataBase.updateUser(user);
+		HttpSession session = req.getSession();
+		session.setAttribute("user", user);
 		resp.sendRedirect("/users/list");
 	}
 }
