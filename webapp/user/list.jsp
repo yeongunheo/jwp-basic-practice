@@ -4,10 +4,10 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-	<jsp:include page="/template/head.jsp"/>
+    <%@ include file="/include/header.jspf" %>
 </head>
 <body>
-<jsp:include page="/template/navigation.jsp"/>
+<%@ include file="/include/navigation.jspf" %>
 
 <div class="container" id="main">
     <div class="col-md-10 col-md-offset-1">
@@ -35,6 +35,6 @@
     </div>
 </div>
 
-<jsp:include page="/template/footer.jsp"/>
+<%@ include file="/include/footer.jspf" %>
 </body>
 </html>
