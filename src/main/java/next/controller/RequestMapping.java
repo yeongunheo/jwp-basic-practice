@@ -8,10 +8,10 @@ public class RequestMapping {
 	
 	void initMapping() {
 		mappings.put("/users/create", new CreateUserController());
-		mappings.put("/users/form", new CreateUserFormController());
+		mappings.put("/users/form", new ForwardController("/user/form.jsp"));
 		mappings.put("", new HomeController());
 		mappings.put("/users", new ListUserController());
-		mappings.put("/users/login", new LoginController());
+		mappings.put("/users/login", new ForwardController("/user/login.jsp"));
 		mappings.put("/users/loginForm", new LoginFormController());
 		mappings.put("/users/logout", new LogoutController());
 		mappings.put("/users/profile", new ProfileController());
